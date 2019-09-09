@@ -3,12 +3,13 @@ import "./App.css";
 
 const BottomRow = () => {
   const [quarterCount, setQuarterCount] = useState(1);
+  const [down, setDown] = useState(1)
   return (
 
     <div className="bottomRow">
       <div className="down">
-        <h3 className="down__title">Down</h3>
-        <div className="down__value">3</div>
+        <h3 className="down__title" onClick={() => setDown(down + 1)}>Down</h3>
+        <div className="down__value">{down}</div>
       </div>
       <div className="toGo">
         <h3 className="toGo__title">To Go</h3>
